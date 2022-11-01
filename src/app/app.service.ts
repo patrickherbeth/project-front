@@ -10,6 +10,6 @@ export class AppService {
   constructor(private http: HttpClient) { }
 
   getDados() : Observable<any>{
-    return this.http.get<any>(`http://localhost:8888/api/documents/listar`);
+    return this.http.get<any>(`http://localhost:8888/api/listar`);
   }
 }
