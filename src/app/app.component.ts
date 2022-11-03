@@ -9,7 +9,8 @@ import {AppService} from "./app.service";
 export class AppComponent {
   title = 'project-front';
 
-  users = [];
+  listDocuments: Documents[] = [];
+
 
   constructor( private appService: AppService ) { }
 
@@ -23,9 +24,9 @@ export class AppComponent {
         next: (resposta) => {
           console.log("resposta ---> ");
           console.log(resposta);
-          this.users = resposta;
+          this.listDocuments = resposta;
           console.log("this.users ---> ");
-          console.log(this.users);
+          console.log(this.listDocuments);
           resolve();
         },
         error: () => {

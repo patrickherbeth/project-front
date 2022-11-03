@@ -9,7 +9,7 @@ export class AppService {
 
   constructor(private http: HttpClient) { }
 
-  getDados() : Observable<any>{
-    return this.http.get<any>(`http://localhost:8888/api/listar`);
+  getDados() : Observable<Documents[]>{
+    return this.http.get<Documents[]>(`http://localhost:8888/api/listar`);
   }
 }

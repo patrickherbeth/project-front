@@ -35,12 +35,15 @@
 </div>
 
 <div class="content" role="main">
-  <ul>
-    <li > Lista Nomes </li>
-  </ul>
-  <ul>
-    <li *ngFor="let user of users"> {{ user }} </li>
-  </ul>
-
+  <table border="0">
+    <tr>
+      <td>Nome</td>
+      <td>Idade</td>
+    </tr>
+    <tr *ngFor="let document of listDocuments">
+      <td> {{ document.id }} </td>
+      <td> {{ document.text }} </td>
+    </tr>
+ </table>
 </div>
 
